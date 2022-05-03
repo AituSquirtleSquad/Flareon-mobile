@@ -1,80 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/mainback">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/movies"
-            android:scaleType="centerCrop"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="45dp"
-
-            />
-
-        <ImageButton
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginLeft="220dp"
-            android:layout_marginTop="45dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/masks"
-            />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            >
-
-            <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="200dp"
-                android:scaleType="fitStart"
-                android:src="@drawable/s"
-                android:background="@null"
-                />
-        </LinearLayout>
-
-        <ImageButton
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/theatre"
-            android:scaleType="fitStart"
-            android:layout_marginLeft="220dp"
-            android:layout_marginTop="200dp"
-            android:background="@null"
-
-            />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/my_recyclers"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="400dp"
-            android:scaleType="centerCrop">
+            android:background="@drawable/mainback">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:text="Book tickets for movies and theater performances in Kazakhstan"
+                android:textColor="@color/editColor"
+                android:textSize="12sp" />
 
 
-        </androidx.recyclerview.widget.RecyclerView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="45dp"
+                app:cardCornerRadius="20dp">>
 
-    </RelativeLayout>
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/movies"
+
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="45dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/masks" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="200dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ball" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="200dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/theatre1"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="500dp"
+                android:layout_height="150dp"
+                android:src="@drawable/movie2"
+                android:layout_marginTop="400dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/my_recyclers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="600dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="50dp">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </RelativeLayout>
 
     </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/blueButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:menu="@menu/bottom_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
