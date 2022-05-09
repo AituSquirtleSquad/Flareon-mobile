@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<ScrollView
+    android:id="@+id/scrollView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="750dp"
+            android:layout_height="550dp"
+            android:layout_marginTop="-225dp"
+            android:src="@drawable/a12"
+            android:tint="#80000000"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginLeft="-60dp"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/movie1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie name"
+            android:textColor="@color/white"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="220dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="release date"
+            android:textColor="@color/white"
+            android:layout_marginTop="190dp"
+            android:layout_marginLeft="220dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time"
+            android:textColor="@color/white"
+            android:layout_marginTop="220dp"
+            android:layout_marginLeft="220dp"
+            android:textSize="15sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book a ticket"
+            android:backgroundTint="@color/blueButton"
+            android:shadowColor="@color/redOne"
+            android:shadowDx="@integer/material_motion_duration_long_2"
+            android:shadowDy="@integer/material_motion_duration_long_2"
+            android:layout_marginTop="250dp"
+            android:layout_marginLeft="220dp"
+            android:elevation="2dp"
+
+
+            />
+</RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9B0119"
+            android:layout_marginTop="305dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Synopsis"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
+
+            <View
+                android:layout_width="380dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="380dp"
+                android:background="@color/blueButton" />
+
+            <TextView
+                android:id="@+id/descrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="400dp"
+                android:text="description"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="380dp"
+                android:layout_height="1.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="650dp"
+                android:background="@color/blueButton"
+                app:layout_constraintBottom_toBottomOf="@+id/descrip"
+                app:layout_constraintLeft_toLeftOf="@+id/descrip"
+                app:layout_constraintTop_toTopOf="@+id/descrip" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="660dp"
+                android:text="Price:"
+                android:textSize="18sp"
+                android:layout_marginBottom="50dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72dp"
+                android:layout_marginTop="660dp"
+                android:text="25$"
+                android:textSize="18sp"
+                android:layout_marginBottom="50dp"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blueButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
